@@ -38,7 +38,7 @@ public class TransHash {
 
 		md.update(userEmail.toLowerCase().getBytes("UTF8"));
 		md.update(dateOfBirth.getBytes("UTF8"));
-		md.update(accessCode.toLowerCase().replaceAll("[^ybndrfg8ejkmcpqxot1uwisza345h769]","").getBytes("UTF8"));
+		md.update(accessCode.replaceAll("[^rpshnaf39wBUDNEGHJKLM4PQRST7VWXYZ2bcdeCg65jkm8oFqi1tuvAxyz]","").getBytes("UTF8"));
 
 		return String.format("%064x", (new BigInteger(1, md.digest())));
 	}
